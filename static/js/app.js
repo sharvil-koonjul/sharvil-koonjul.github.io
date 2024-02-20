@@ -29,8 +29,8 @@ function objectChanged(response) {
         // Assigning the data to the variables for the bubble chart
         let xValues = selectedSample.otu_ids;
         let yValues = selectedSample.sample_values;
-        // Scaling the Marker size to 75% to minimize visual clutter
-        let markerSizes = selectedSample.sample_values.map(value => value * 0.75);
+        // Scaling the Marker size to 90% to minimize visual clutter
+        let markerSizes = selectedSample.sample_values.map(value => value * 0.90);
         let markerColors = selectedSample.otu_ids;
         let textValues = selectedSample.otu_labels;
     
@@ -42,7 +42,7 @@ function objectChanged(response) {
             marker: {
                 size: markerSizes,
                 color: markerColors,
-                colorscale: 'Viridis'
+                colorscale: 'Earth'
             },
             text: textValues,
             hoverinfo:'text'
